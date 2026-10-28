@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* configuración general */
+
+body {
+    color: white;
+    font-family: "Inter", sans-serif;
+    background: #000;
+    isolation: isolate;
+}
+
+
+/* fondo */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: url("../assets/parasomnia-fondo.jpg") center / cover no-repeat;
+
+    filter: blur(6px);
+    transform: scale(1.05);
+
+    z-index: -1;
+
+    animation: fadeIn 0.5s ease;
+}
+
+
+/* header */
+
+.logoHeader {
+    width: 180px;
+    height: auto;
+     transition: transform 0.3s ease,
+                opacity 0.3s ease;
+}
+
+.logoHeader:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+
+/*  main */
+
+.main {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* logo principal */
+
+.logoPrincipal {
+    width: 450px;
+    max-width: 80%;
+    height: auto;
+
+    filter:
+        drop-shadow(0 0 10px rgba(255, 255, 255, 0.15))
+        drop-shadow(0 0 25px rgba(120, 0, 0, 0.25));
+
+    animation: aparecer 1.5s ease;
+}
+
+
+/* donaciones */
+
+.donaciones {
+    margin-top: 45px;
+
+    font-family: "Creepster", cursive;
+    font-size: 2.8rem;
+
+    color: #fff;
+    text-decoration: none;
+
+    letter-spacing: 2px;
+
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease,
+        transform 0.3s ease;
+
+    animation: aparecer 1.5s ease;
+
+}
+
+
+.donaciones:hover {
+    color: #8b0000;
+
+    text-shadow:
+        0 0 5px #8b0000,
+        0 0 15px #8b0000,
+        0 0 30px rgba(139, 0, 0, 0.5);
+
+    transform: scale(1.05);
+    
+    
+}
+
+
+/* redes sociales */
+
+.redesContenedor {
+    margin-top: 5em;
+
+    text-align: center;
+
+    padding-bottom: 3rem;
+
+    animation: aparecer 1.5s ease;
+}
+
+
+.iconosRedes > a {
+    color: rgb(172, 36, 36);
+
+    font-size: 2rem;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.iconosRedes > a:hover {
+    color: #8b0000;
+
+    transform: scale(1.15);
+}
+
+
+/* animaciones */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* diseño responsive para mobile */
+
+@media (max-width: 768px) {
+
+    .logoHeader {
+        width: 140px;
+    }
+
+
+    .logoPrincipal {
+        width: 350px;
+        max-width: 85%;
+    }
+
+
+    .donaciones {
+        font-size: 2.2rem;
+    }
+
+}

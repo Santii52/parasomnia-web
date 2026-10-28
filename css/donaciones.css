@@ -1,0 +1,587 @@
+
+/* seteo de css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    background: #000;
+    isolation: isolate;
+}
+
+
+/* fondo */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        url("../assets/fondo-donaciones.jpg")
+        center / cover no-repeat;
+
+    filter: blur(8px);
+    transform: scale(1.05);
+    z-index: -1;
+}
+
+
+/* header */
+
+.header {
+    position: relative;
+    background: rgba(0, 0, 0, 0.75);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    z-index: 10;
+}
+
+
+.logoHeader {
+    width: 180px;
+    height: auto;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+.logoHeader:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+
+/* main */
+
+.donacionesMain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 70px 20px 90px;
+}
+
+
+/* contenido principal */
+
+.contenidoDonaciones {
+    width: 950px;
+    max-width: 100%;
+    padding: 55px 65px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20, 20, 20, 0.88),
+            rgba(5, 5, 5, 0.94)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 8px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.65),
+        inset 0 0 40px rgba(139, 0, 0, 0.03);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* titulo */
+
+.tituloDonaciones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+
+.tituloDonaciones h1 {
+    margin: 0;
+
+    font-family: "Creepster", cursive;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+
+    color: #fff;
+
+    text-shadow:
+        0 0 5px #8b0000,
+        0 0 15px rgba(139, 0, 0, 0.65),
+        0 0 30px rgba(139, 0, 0, 0.25);
+}
+
+
+.lineaDecorativa {
+    width: 90px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #8b0000,
+            transparent
+        );
+
+    opacity: 0.8;
+}
+
+
+/* texto introduccion */
+
+.introduccion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.contenidoDonaciones p {
+    color: #d2d2d2;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+
+/* contenido exclusivo donaciones */
+
+.contenidoExclusivo {
+    display: inline-block;
+
+    margin-top: 5px;
+    padding: 14px 20px;
+
+    color: #c76bd7 !important;
+
+    background: rgba(121, 19, 141, 0.08);
+
+    border-left: 2px solid #79138d;
+    border-right: 2px solid #79138d;
+
+    border-radius: 4px;
+
+    text-shadow:
+        0 0 10px rgba(121, 19, 141, 0.25);
+}
+
+
+.contenidoExclusivo i {
+    margin-right: 7px;
+    font-size: 0.9rem;
+}
+
+
+/* secciones */
+
+.explicacion {
+    max-width: 800px;
+    margin: 60px auto 0;
+    padding-top: 40px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.explicacion h2,
+.metodosDonacion h2 {
+    margin-bottom: 25px;
+
+    font-family: "Creepster", cursive;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+
+    color: #fff;
+}
+
+
+.explicacion h2::after,
+.metodosDonacion h2::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 2px;
+
+    margin: 12px auto 0;
+
+    background: #8b0000;
+}
+
+
+/* metodos de pago */
+
+.metodosDonacion {
+    margin-top: 65px;
+    padding-top: 40px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.metodoDonacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+    margin-top: 18px;
+    padding: 22px 25px;
+
+    text-align: left;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 6px;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.metodoDonacion:hover {
+    background: rgba(139, 0, 0, 0.055);
+
+    border-color: rgba(139, 0, 0, 0.45);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* informacion pago */
+
+.metodoInfo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+.iconoMetodo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 50px;
+    height: 50px;
+
+    color: #a71919;
+    font-size: 1.4rem;
+
+    background: rgba(139, 0, 0, 0.1);
+
+    border: 1px solid rgba(139, 0, 0, 0.25);
+    border-radius: 50%;
+}
+
+
+.metodoInfo h3 {
+    margin: 0 0 5px;
+
+    color: #fff;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+
+.metodoInfo p {
+    margin: 0;
+
+    color: #999;
+
+    font-size: 0.9rem;
+}
+
+
+/* botones Mercado Pago */
+
+.opcionesMercadoPago {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+
+.opcionesMercadoPago .botonDonar {
+    min-width: auto;
+    padding: 11px 16px;
+}
+
+
+/* boton donar */
+
+.botonDonar {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    min-width: 125px;
+    padding: 11px 20px;
+
+    color: #fff;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    background: #8b0000;
+
+    border: 1px solid #a00000;
+    border-radius: 4px;
+
+    box-shadow:
+        0 4px 15px rgba(139, 0, 0, 0.15);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.botonDonar:hover {
+    color: #fff;
+
+    background: #a00000;
+
+    border-color: #c00000;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 20px rgba(139, 0, 0, 0.3);
+}
+
+
+.botonDonar i {
+    font-size: 0.8rem;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.botonDonar:hover i {
+    transform: translate(2px, -2px);
+}
+
+
+/* mensaje final */
+
+.mensajeFinal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 60px;
+    padding-top: 35px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.imagenTito {
+    width: 70px;
+    height: auto;
+
+    margin-bottom: 10px;
+
+    filter:
+        drop-shadow(0 0 10px rgba(139, 0, 0, 0.25));
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.imagenTito:hover {
+    transform: scale(1.08) rotate(-2deg);
+}
+
+
+.mensajeFinal p {
+    margin: 0;
+
+    color: #aaa;
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+.mensajeFinal span {
+    color: #777;
+}
+
+
+/* diseño responsive para mobile */
+
+@media (max-width: 768px) {
+
+    .header .navbar {
+        padding: 1rem !important;
+    }
+
+
+    .logoHeader {
+        width: 140px;
+    }
+
+
+    .donacionesMain {
+        padding: 35px 15px 50px;
+    }
+
+
+    .contenidoDonaciones {
+        padding: 40px 22px;
+        border-radius: 6px;
+    }
+
+
+    .tituloDonaciones {
+        gap: 12px;
+        margin-bottom: 35px;
+    }
+
+
+    .tituloDonaciones h1 {
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+
+
+    .lineaDecorativa {
+        width: 35px;
+    }
+
+
+    .contenidoDonaciones p {
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
+
+
+    .contenidoExclusivo {
+        padding: 12px 14px;
+    }
+
+
+    .explicacion,
+    .metodosDonacion {
+        margin-top: 45px;
+        padding-top: 30px;
+    }
+
+
+    .explicacion h2,
+    .metodosDonacion h2 {
+        font-size: 2rem;
+    }
+
+
+    .metodoDonacion {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 18px;
+        padding: 20px;
+    }
+
+
+    .metodoInfo {
+        align-items: flex-start;
+    }
+
+
+    .opcionesMercadoPago {
+        width: 100%;
+        flex-direction: column;
+    }
+
+
+    .opcionesMercadoPago .botonDonar {
+        width: 100%;
+    }
+
+
+    .metodoDonacion > .botonDonar {
+        width: 100%;
+    }
+
+
+    .mensajeFinal {
+        margin-top: 45px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .tituloDonaciones h1 {
+        font-size: 2.5rem;
+    }
+
+
+    .lineaDecorativa {
+        width: 20px;
+    }
+
+
+    .contenidoDonaciones {
+        padding: 35px 17px;
+    }
+
+
+    .metodoInfo {
+        gap: 12px;
+    }
+
+
+    .iconoMetodo {
+        width: 43px;
+        height: 43px;
+        font-size: 1.1rem;
+    }
+
+}
+```
